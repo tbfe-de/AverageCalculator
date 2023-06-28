@@ -23,7 +23,7 @@
 
  -----------------------------------------------------------------
 
- TODO (optional - meant only for further self-study only):
+ TODO (optional - meant for further self-study only):
  - Add some more tests, especially for the border cases like:
    - completely empty input
    - just a single number

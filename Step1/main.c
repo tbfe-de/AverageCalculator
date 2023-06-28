@@ -16,7 +16,7 @@
 
  -----------------------------------------------------------------
 
- TODO (optional - meant only for further self-study only):
+ TODO (optional - meant for further self-study only):
  - How does the program react to input that is not numeric?
  - What needs to be modified if the values read from each input
    line are rather `double`-s than `float`?

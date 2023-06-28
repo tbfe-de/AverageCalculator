@@ -8,21 +8,23 @@
 
  -----------------------------------------------------------------
 
- TODO (optional - meant only for further self-study only):
- - Have a closer look to the `main` function compiled when `TEST`
-   is defined and note that how the expectations for output are
-   specified differently if the expected output is only one line
-   (or nothing at all) or multiple line. It affects how potential
-   differences are displayed if a test fails.
- - If multiples lines of output are expected it is easier to use
-   "raw string literals" (as available since C++11). Accordingly
-   modify how the expectation is supplied.
+ TODO (optional - meant for further self-study only):
+ - Inform yourself (eg. using cppreference.com) about the
+   purpose of the header file `<iosfwd>`.
+ - In which place were its use more appropiate than the currently
+   used `<iostream>`?
+ - Why hadn't that change been possible in the version handing
+   over the arguments as pointers, using `&std::cin` and
+   `&std::cout` as default values?
+ - Why in the current versions wouldn't that change be possible
+   if the overload with no arguments were defined as `inline`
+   function?
 */
 
 #include "do_averages.h"
 
 #include <sstream>
-    //std::istringstream
+    // std::istringstream
 
 #ifndef TEST
 int main() {
