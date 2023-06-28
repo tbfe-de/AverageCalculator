@@ -5,11 +5,11 @@
  TODO:
  - Move the INNER loop of `do_averages` into a function of its
    own, called `do_single_average`. Its argument should be
-   - an `std::string` (the single line just read) and
-   - an `std::ostring` reference by which `out` is forwarded(to show
-      the average)
-   Its return value should be a `bool`-ean which indicates that
-   the OUTER loop (in `do averages`) should
+   - an `std::stream` reference, by which the `std::istringstream`
+     holding the single line just read is forwarded) and
+   - an `std::ostream` reference by which `out` is forwarded.
+   The return value of `do_single_average` should be a `bool`-ean
+   to indicate whether the OUTER loop (in `do averages`) should
     - continue (if `true` is returned) or
     - or be left (if `false` is returned
    (Apart from that The OUTER loop should remain unchanged.)
