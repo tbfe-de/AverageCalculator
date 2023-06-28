@@ -24,25 +24,27 @@ bool do_single_average(std::string line, sum_count& result) {
         result.sum += value;
         ++result.count;
     }
-    bool const have_received_some_values_but_dont_see_eol{
+    bool const received_some_values_but_not_seen_eol{
         (result.count > 0) && !iss.eof()
     };
-    bool const fail_bit_set_but_not_together_with_eof_bit{
+    bool const fail_bit_is_set_but_eof_bit_is_not{
         iss.fail() && !iss.eof()
     };
-    bool const some_non_numeric_input{
-        have_received_some_values_but_dont_see_eol
-     || fail_bit_set_but_not_together_with_eof_bit
-    };
-    return not some_non_numeric_input;
+    if (received_some_values_but_not_seen_eol
+     || fail_bit_is_set_but_eof_bit_is_not)
+        throw "non-numeric input";
 }
 
 void do_averages(std::istream& in, std::ostream& out) {
     std::string line;
     while (std::getline(in, line)) {
         sum_count sc;
-        if (not do_single_average(line, sc)) {
-            out << "non-numeric input - line ignored" << std::endl;
+        try {
+            do_single_average(line, sc))
+        }
+        catch (char const* errmsg) {
+            out << errmsg << " - line ignored" << std::endl;
+            continue;
         }
         if (sc.count == 0) return;
         out << sc.sum/sc.count << std::endl;

@@ -11,15 +11,16 @@
 
  - Note that in `main.cpp` there are two different `main`
    functions, one for interactive testing and another one for a
-   "TDD approach" (TDD = "Test Driven Development" which in this
-   case means the function `do_averages` is called with prepared
-   input and its output is checked against expectations).
-   Which one gets compiled depends on whether the macro `TEST` is
-   compiled on compilation.
- - Currently `do_averages` have default arguments, which allows
-   to call in without any arguments in the `main` function.
-   Remove the default arguments and add an overload without
-   arguments to be called in `main`.
+   "TDD approach". (TDD = "Test Driven Development" which means
+   the function `do_averages` is called with prepared input and
+   its output is checked against expectations). Which `main`
+   program gets compiled and executed depends on the macro `TEST`
+   being set on compilation.
+ - Currently `do_averages` has default arguments, which allows
+   to call it without any arguments from the `main` function.
+   Remove the default arguments and instead add an overload
+   without no arguments so that the call in `main` can stay the
+   same.
 
  -----------------------------------------------------------------
 

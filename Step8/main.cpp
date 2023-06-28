@@ -1,39 +1,35 @@
 /*
  =================================================================
- Exercise 7 (for Solution see Exercise 8)
+ Exercise 8 (for Solution see Exercise 9)
  =================================================================
- TODO:
- - Have the function `do_single_average` return a `bool`-result
-   to to indicate whether all the input was numeric or not.
- - When `do_averages` calls `do_single_average` and receives the
-   result `false` it should show a message that it ignores this
-   line of input.
- - If there has been non-numeric input the content of `sum_count`
-   should NOT be considered for the decision whether to end the
-   loop in `do_averages.
-
- HINT: The decision in whether there has been non-numeric input
- in a line can be made in `do_single_average` by looking at both,
- the count of successfully read data items and the state of the
- `std::istringstream iss` as follows:
-    if (((result.count > 0) && !iss.eof())
-     || (!iss.fail() && !iss.eof())) ...
+  - Instead of returning the indication if there has been bad
+    input with with a `bool`-result throw an exception.
+  - The simple-most solution would be to just `throw` the message
+    to be displayed by `do_averages` before continuing as, ie.
+    he type caught by catch would be `char const*`.
 
  -----------------------------------------------------------------
 
  TODO (optional - meant for further self-study only):
- - Further explore how the "state bits" for `fail` and `eof` are
-   set in an `std::istream` depending on the validity of the the
-   input when numeric values are extracted.
- - How can the above logic to test for invalid input be simplified
-   if the line turned into an `std::istringstream` would still
-   contain the trailing `'\n'` which is stripped off as the line
-   was read into an `std::string` with `std::getline`?
- - Based on the above, how might `do_averages` "help" the called
-   function `do_single_average` to simplify the test?
+ - Come up with more sophisticated ways to construct an error
+   message in `do_single_average`. eg. build an `std::string`
+   naming the offending (non-numeric) character and its position
+   in the input line.
+ - Of course, if an `std::string` is thrown instead of a simple
+   string literal in double quotes the type expected by catch
+   needs to be changed accordingly.
 
-   the sum and the count as return value of `do_averages` instead
-   via a reference argument.
+ HINT: After a failed application of `operator>>` like
+    float value;
+    iss >> value;
+ the not yet processed part of an `std::istringstream`
+ representing a single line of input the unread remainder may be
+ retrieved like this:
+    if (iss.fail() && !iss.eof())   // failed before eol
+        iss.clear();                // clear fail state
+        std::string remainder{};    // variable to read ...
+        std::getline(iss, remainder);   // ... what remains
+    }
 */
 
 #include "do_averages.h"

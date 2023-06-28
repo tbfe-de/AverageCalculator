@@ -15,9 +15,24 @@
  HINT: The decision in whether there has been non-numeric input
  in a line can be made in `do_single_average` by looking at both,
  the count of successfully read data items and the state of the
- `std::istringstream iss` as follows:
+ `std::istringstream iss`:
+    ...
     if (((result.count > 0) && !iss.eof())
-     || (!iss.fail() && !iss.eof())) ...
+     || (iss.fail() && !is.eof()))
+        return false;
+    else
+        return true;
+    ...
+ Why is the test that complicated?
+ - If already seen some values but not  arriving at "eof" (which
+   actually is "end of line") then there has been something in
+   the input that was not numeric:
+    ... (result.count > 0) && !iss.eof() ...
+ - Same if extracting some value failed but the end has not been
+   reached:
+     ... iss.fail() && !iss.eof() ...
+ - Both need to be or-ed together to get a `true` result if there
+   have been errors, in which case `false` must be returned.
 
  -----------------------------------------------------------------
 
