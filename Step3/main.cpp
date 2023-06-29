@@ -35,8 +35,6 @@
    with `main` calling these functions.
 */
 
-//@impl main.cpp
-//
 #include "do_averages.h"
 
 #include <sstream>
@@ -49,28 +47,40 @@ int main() {
 #else
 #include "pxt.h"
 
+#include <sstream>
+
 int main() {
-    std::istringstream test_input{
+    { ////////////////////////////////////////////////////////////
+    std::istringstream input{
             "1 5 7"     "\n"
             "1.5 7"     "\n"
             "15.7"      "\n"
     };
-    std::ostringstream received_output{};
-    PX(do_averages(&test_input, &received_output), received_output.str())
-    #if 0 // expectations are specified as classic C literals (which
-          // are getting concatenated if seperated by white-space only)
+    std::ostringstream output{};
+    PX(do_averages(&input, &output), output.str())
         >>= "4.33333"   "\n"
              "4.25"     "\n"
              "15.7"     "\n";
-    #else // alternatively expectations can be specified as raw strings
-          // literals (since C++11) requiring less quoting as everything
-          // inside is taken literal (especially the line endings)
-        >>= R"(
-                4.33333
-                4.25
-                15.7
-        )";
-    #endif
+    } ////////////////////////////////////////////////////////////
+
+    { ////////////////////////////////////////////////////////////
+    std::istringstream input{"\n"};
+    std::ostringstream output{};
+    PX(do_averages(&input, &output), output.str()) == "";
+    } ////////////////////////////////////////////////////////////
+
+    { ////////////////////////////////////////////////////////////
+    std::istringstream input{
+            "1 5 7"     "\n"
+            "1 S 7"     "\n"
+            "15.7"      "\n"
+    };
+    std::ostringstream output{};
+    PX(do_averages(&input, &output), output.str())
+        >>= "4.33333"   "\n"
+             "1"        "\n"
+             "15.7"     "\n";
+    } ////////////////////////////////////////////////////////////
  }
 
 #endif

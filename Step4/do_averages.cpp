@@ -29,5 +29,5 @@ void do_averages(std::istream* in, std::ostream* out) {
 }
 
 void do_averages() {
-    do_averages(std::cin, std::cout);
+    do_averages(&std::cin, &std::cout);
 }

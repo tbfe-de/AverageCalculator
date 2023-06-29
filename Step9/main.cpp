@@ -3,12 +3,15 @@
  Exercise 9 (for Solution see Exercise 10)
  =================================================================
  TODO:
-  - ...
+  - Add direct member initialization to the `struct sum_count`,
+    overload `operator<<` so that it shows the quotient, and
+    `operator+=` for a right-hand operand of type float so that
+    it gets added to he `sum` and increments the `count`.
 
  -----------------------------------------------------------------
 
  TODO (optional - meant for further self-study only):
-#include "do_averages.h"
+ ...
 */
 
 #include "do_averages.h"
@@ -24,27 +27,37 @@ int main() {
 #include "pxt.h"
 
 int main() {
-    std::istringstream test_input{
+    { ////////////////////////////////////////////////////////////
+    std::istringstream input{
             "1 5 7"     "\n"
             "1.5 7"     "\n"
             "15.7"      "\n"
     };
-    std::ostringstream received_output{};
-    PX(do_averages(&test_input, &received_output), received_output.str())
-    #if 0 // expectations are specified as classic C literals (which
-          // are getting concatenated if seperated by white-space only)
+    std::ostringstream output{};
+    PX(do_averages(input, output), output.str())
         >>= "4.33333"   "\n"
              "4.25"     "\n"
              "15.7"     "\n";
-    #else // alternatively expectations can be specified as raw strings
-          // literals (since C++11) requiring less quoting as everything
-          // inside is taken literal (especially the line endings)
-        >>= R"(
-                4.33333
-                4.25
-                15.7
-        )";
-    #endif
+    } ////////////////////////////////////////////////////////////
+
+    { ////////////////////////////////////////////////////////////
+    std::istringstream input{"\n"};
+    std::ostringstream output{};
+    PX(do_averages(input, output), output.str()) == "";
+    } ////////////////////////////////////////////////////////////
+
+    { ////////////////////////////////////////////////////////////
+    std::istringstream input{
+            "1 5 7"     "\n"
+            "1 S 7"     "\n"
+            "15.7"      "\n"
+    };
+    std::ostringstream output{};
+    PX(do_averages(input, output), output.str())
+        >>= "4.33333"                                     "\n"
+             "non-numeric input - line ignored"  "\n"
+             "15.7"                                       "\n";
+    } ////////////////////////////////////////////////////////////
  }
 
 #endif

@@ -35,14 +35,17 @@ bool do_single_average(std::string line, sum_count& result) {
      || fail_bit_set_but_not_together_with_eof_bit
     };
     return not some_non_numeric_input;
+    result.sum += value;
+    ++result.count;
 }
 
 void do_averages(std::istream& in, std::ostream& out) {
     std::string line;
     while (std::getline(in, line)) {
-        sum_count sc;
+        sum_count sc = {0.0f, 0};
         if (not do_single_average(line, sc)) {
             out << "non-numeric input - line ignored" << std::endl;
+            continue;
         }
         if (sc.count == 0) return;
         out << sc.sum/sc.count << std::endl;

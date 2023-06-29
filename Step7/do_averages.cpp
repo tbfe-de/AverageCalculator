@@ -29,7 +29,7 @@ void do_single_average(std::string line, sum_count& result) {
 void do_averages(std::istream& in, std::ostream& out) {
     std::string line;
     while (std::getline(in, line)) {
-        sum_count sc;
+        sum_count sc{0.0f, 0};
         do_single_average(line, sc);
         if (sc.count == 0) return;
         out << sc.sum/sc.count << std::endl;

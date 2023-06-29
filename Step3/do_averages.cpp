@@ -1,5 +1,3 @@
-//@impl do_averages.cpp
-
 #include "do_averages.h"
 
 #include <iostream>
@@ -33,4 +31,3 @@ void do_averages(std::istream* in, std::ostream* out) {
 void do_averages() {
     do_averages(&std::cin, &std::cout);
 }
-

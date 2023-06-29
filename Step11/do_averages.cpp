@@ -12,27 +12,33 @@
     // std::getline
     // std::string
 
-struct sum_count {
-    float sum{0.0f};
-    int count{0};
+class Averager {
+    float sum_{0.0f};
+    int count_{0};
+    friend
+    std::ostream& operator<<(std::ostream&, Averager const & rhs);
+    friend
+    void operator+=(Averager& lhs, float rhs);
+public:
+    auto getCount() const { return count_; }
 };
 
-std::ostream& operator<<(std::ostream& lhs, sum_count const& rhs) {
-    return lhs << rhs.sum/rhs.count;
+std::ostream& operator<<(std::ostream& lhs, Averager const& rhs) {
+    return lhs << rhs.sum_/rhs.count_;
 }
 
-void operator+=(sum_count& lhs, float rhs) {
-    lhs.sum += rhs;
-    ++lhs.count;
+void operator+=(Averager& lhs, float rhs) {
+    lhs.sum_ += rhs;
+    ++lhs.count_;
 }
 
-void do_single_average(std::string line, sum_count& result) {
+void do_single_average(std::string line, Averager& result) {
     std::istringstream iss{line};
     float value;
     while (iss >> value)
         result += value;
     bool const received_some_values_but_not_seen_eol{
-        (result.count > 0) && !iss.eof()
+        (result.getCount() > 0) && !iss.eof()
     };
     bool const fail_bit_is_set_but_eof_bit_is_not{
         iss.fail() && !iss.eof()
@@ -45,7 +51,7 @@ void do_single_average(std::string line, sum_count& result) {
 void do_averages(std::istream& in, std::ostream& out) {
     std::string line;
     while (std::getline(in, line)) {
-        sum_count sc{};
+        Averager sc{};
         try {
             do_single_average(line, sc);
         }
@@ -53,7 +59,7 @@ void do_averages(std::istream& in, std::ostream& out) {
             out << errmsg << " - line ignored" << std::endl;
             continue;
         }
-        if (sc.count == 0) return;
+        if (sc.getCount() == 0) return;
         out << sc << std::endl;
     }
 }
