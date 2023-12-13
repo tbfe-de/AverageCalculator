@@ -1,22 +1,7 @@
 /*
  =================================================================
- Exercise 11 (for Solution see Exercise 12)
+ Step 11 (for Solution see Step 12)
  =================================================================
- TODO:
-   Put the class `Averager` and the functions `do_averages` and
-   `do_single_average` into a namespace "my" and adapt the call in
-   the main program accordingly.
-   As this as the sole exercise would be a bit too easy :-) also move
-   the the class definition of `Averager` into a header file and the
-   out-of-class definition of its friend functions into an implementation
-   file. For your convenience both files have alsready been prepared
-   (with the usual names "Averager.h" and "Averager.cpp" as EMPTY
-   files)
-
- -----------------------------------------------------------------
-
- TODO (optional - meant for further self-study only):
- ...
 */
 
 #include "do_averages.h"

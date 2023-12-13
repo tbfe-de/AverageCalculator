@@ -1,17 +1,7 @@
 /*
  =================================================================
- Exercise 10 (for Solution see Exercise 11)
+ Step 10 (for Solution see Step 11)
  =================================================================
- TODO:
-  - Turn the `struct sum_count` into a `class Averager` by making
-    `operator<<` and `operator+=` friends and in addition
-    provide a member function `getCount` tor return the `count_`
-    member in the two places where it is currently used.
-
- -----------------------------------------------------------------
-
- TODO (optional - meant for further self-study only):
- ...
 */
 
 #include "do_averages.h"

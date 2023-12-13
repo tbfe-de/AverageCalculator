@@ -1,15 +1,7 @@
 /*
  =================================================================
- Exercise 11 (for Solution see Exercise 12)
+ Step 12 (no Solution for the optional TODO part is provided)
  =================================================================
- TODO:
- - move class Averager into a header and an implementation file
-   and put everything into a `namespace my`
-
- -----------------------------------------------------------------
-
- TODO (optional - meant for further self-study only):
- ...
 */
 
 #include "do_averages.h"

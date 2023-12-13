@@ -1,5 +1,17 @@
 {
     "cSpell.words": [
-        "Averager"
-    ]
+        "Averager",
+        "cout",
+        "cppreference",
+        "getline",
+        "iosfwd",
+        "iostream",
+        "istream",
+        "istringstream",
+        "ostream",
+        "struct"
+    ],
+    "files.associations": {
+        "iosfwd": "cpp"
+    }
 }

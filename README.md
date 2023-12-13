@@ -5,21 +5,23 @@ Practical *Step by Step Exercise* Accompanying an introductory
 ## Step 1
 
 Review some C code supplied as single source file.  (Prior
-knowledge of the C language is expected from the participants.)
+knowledge of the C language is expected so that step should be
+skipped by participants without such knowledge.)
 
 ## Step 2
 
-Compare the C code from Step 1 to equivalent C++ code.
+Compare the C code from Step 1 to equivalent C++ code and describe
+advantages.
 
 ## Step 3
 
-With the prior single source file split into the usual header and
-implementation and TDD added default arguments are to be replaced
-by an overload.
+Split the single source used so far into a header and an
+implementation; also replace default arguments with an additional
+overload.
 
 ## Step 4
 
-Pointer arguments to be turned in references.
+Turn pointer arguments into references.
 
 ## Step 5
 

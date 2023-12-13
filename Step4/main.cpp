@@ -1,24 +1,7 @@
 /*
  =================================================================
- Exercise 4 (for Solution see Exercise 5)
+ Step 4 (for Solution see Step 5)
  =================================================================
- TODO:
- - Currently the arguments handed over to `do_average` are
-   pointers. Turn them into references.
-
- -----------------------------------------------------------------
-
- TODO (optional - meant for further self-study only):
- - Inform yourself (eg. using cppreference.com) about the
-   purpose of the header file `<iosfwd>`.
- - In which place were its use more appropiate than the currently
-   used `<iostream>`?
- - Why hadn't that change been possible in the version handing
-   over the arguments as pointers, using `&std::cin` and
-   `&std::cout` as default values?
- - Why in the current versions wouldn't that change be possible
-   if the overload with no arguments were defined as `inline`
-   function?
 */
 
 #include "do_averages.h"

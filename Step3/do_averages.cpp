@@ -27,7 +27,3 @@ void do_averages(std::istream* in, std::ostream* out) {
         *out << sum/count << std::endl;
     }
 }
-
-void do_averages() {
-    do_averages(&std::cin, &std::cout);
-}

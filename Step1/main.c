@@ -1,27 +1,7 @@
 /*
  =================================================================
- Exercise 1 (for Solution see Exercise 2)
+ Step 1 (for Solution see Step 2)
  =================================================================
- TODO:
- - Examine the C-program below and determine what it does.
- - When compiling with `onlineGDB` change the compiler C++20 in
-   the *Language* drop down menu top right
- - When compiling with `g++` or `clang++` change the compile
-   optional from
-    -xc -std=c89
-  (= oldest C version for standardize by ANSI/ISO) to
-    -xc++ -std=c++20`
-  (= C++ version standardized by ISO 30 years after the C))
- Will it still compile?
-
- -----------------------------------------------------------------
-
- TODO (optional - meant for further self-study only):
- - How does the program react to input that is not numeric?
- - What needs to be modified if the values read from each input
-   line are rather `double`-s than `float`?
- - What needs to be modified if the values read from each input
-   line are rather `unsigned int`-s than `float`?
 */
 
 #include <stdio.h>
