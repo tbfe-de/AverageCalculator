@@ -1,13 +1,14 @@
 /*
  =================================================================
- Exercise 3 (Solution see Exercise 4 ignoring the new TODO-s)
+ Step 3 (Solution see Step 4)
  =================================================================
 */
 
 #include "do_averages.h"
 
 #include <sstream>
-    //std::istringstream
+    // std::istringstream
+    // std::ostringstream
 
 #ifndef TEST
 int main() {
@@ -15,9 +16,6 @@ int main() {
 }
 #else
 #include "pxt.h"
-
-#include <sstream>  // std::istringstream
-                    // std::ostringstream
 
 int main() {
     { ////////////////////////////////////////////////////////////
