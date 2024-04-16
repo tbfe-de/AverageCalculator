@@ -1,4 +1,5 @@
- TODO:
+# TODO
+
 - Examine the C-program `main.c` and determine what it does.
   If you think you understand, predict the output if you compile
   the program (see below) and run it from the command line as
