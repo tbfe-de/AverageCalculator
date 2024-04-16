@@ -8,6 +8,7 @@
 
 #include <sstream>
     // std::istringstream
+    // std::ostringstream
 
 #ifndef TEST
 int main() {
