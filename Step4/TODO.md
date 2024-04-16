@@ -1,7 +1,8 @@
-TODO:
+# TODO
 
-- Currently the arguments handed over to `do_average` are
-  pointers. Turn them into references.
+Currently the arguments handed over to `do_average` are pointers.
+
+- Do all the changes necessary to turn them into references.
 
 -----------------------------------------------------------------
 
