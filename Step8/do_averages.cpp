@@ -35,8 +35,6 @@ bool do_single_average(std::string line, sum_count& result) {
      || fail_bit_set_but_not_together_with_eof_bit
     };
     return not some_non_numeric_input;
-    result.sum += value;
-    ++result.count;
 }
 
 void do_averages(std::istream& in, std::ostream& out) {

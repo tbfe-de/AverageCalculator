@@ -1,10 +1,11 @@
-TODO:
+# TODO
 
 - Instead of returning the indication if there has been bad
   input with with a `bool`-result throw an exception.
-- The simple-most solution would be to just `throw` the message to
-  be displayed by `do_averages` before continuing as, ie. the type
-  caught by catch would be `char const*`.
+- The simple-most solution would be to just `throw` the message,
+  eg. "non-numeric value in input line" to be displayed by
+  `do_averages` before continuing as, ie. the type to be caught by
+  the `catch`-block would need to a be `char const*`.
 
 -----------------------------------------------------------------
 
