@@ -1,14 +1,15 @@
 # TODO
 
-- Move the INNER loop of `do_averages` into a function of its
-  own, called `do_single_average`. Its argument should be
-  - an `std::istream` reference (by which the `std::istringstream`
-    holding the single line just read is forwarded) and
+- Move the INNER loop of `do_averages` together with all statement
+  accessing any of the variables `value`, `sum`, and `count` into
+  new function called `do_single_average`. Its argument should be
+  - an `std::istream&` (by which the `std::istringstream` holding
+    the single line just read is forwarded) and
   - an `std::ostream` reference (by which `out` is forwarded).
-  The return value of `do_single_average` should be a `bool`-ean
-  to indicate whether the OUTER loop (in `do averages`) should
-    - `continue` (if `do_single_average` returns `true`) or
-    - `return` (if `do_single_reference` returns `false`)
+  - The return value of `do_single_average` should be a `bool`-ean
+    which indicates whether the OUTER loop (in `do averages`)
+    - should `continue` (if `do_single_average` returns `true`) or
+    - `return` (in case `do_single_reference` returns `false`).
 - Apart from that the OUTER loop should remain unchanged.
 
 ------------------------------------------------------------------

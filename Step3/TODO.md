@@ -1,14 +1,12 @@
 # TODO
 
-- Examine the file structure of the two translation units
-  - `main.cpp` and
-  - `do_averages.cpp` together with the shared header file
-  - `do_averages.h`
-- Especially understand that in `main.cpp` there are now two
-  different `main` functions (which cannot exist both together
-  at the same time):
-  - One is for interactive testing (as used in the previous step).
-  - The other contributes a "TDD approach" (TDD = "Test Driven
+- Examine the file structure of the two implementation files (aka.
+  translation units) `main.cpp` and `do_averages.cpp` and the
+  single header file `averages.h`). together
+- ¨Understand that in `main.cpp` there are two different `main`
+   functions (though both cannot exist at the same time):
+  - one is for interactive testing (as used in the previous step);
+  - the other contributes a "TDD approach" (TDD = "Test Driven
     Development") which means the function `do_averages` is called
     with prepared input and its output is checked against
     expectations.
@@ -17,7 +15,7 @@
   - you may add its definition directly to the source code in file
     `main.cpp` with a line near the beginning:\
     `#define TEST`
-  - Alternatively, if `g++` or `clang++` is used for compilation
+  - alternatively, if `g++` or `clang++` is used for compilation
     that macro can be defined without changing the source code in
     `main.cpp` by using the command line option `-DTEST`.
 
