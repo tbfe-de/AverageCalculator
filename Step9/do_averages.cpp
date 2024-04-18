@@ -25,7 +25,7 @@ void do_single_average(std::string line, sum_count& result) {
         ++result.count;
     }
     bool const received_some_values_but_not_seen_eol{
-       (result.count > 0) && !iss.eof()
+        (result.count > 0) && !iss.eof()
     };
     bool const fail_bit_is_set_but_eof_bit_is_not{
         iss.fail() && !iss.eof()
