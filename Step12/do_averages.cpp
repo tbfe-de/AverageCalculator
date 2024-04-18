@@ -14,8 +14,6 @@
     // std::getline
     // std::string
 
-namespace my {
-
 void do_single_average(std::string line, Averager& result) {
     std::istringstream iss{line};
     float value;
@@ -51,5 +49,3 @@ void do_averages(std::istream& in, std::ostream& out) {
 void do_averages() {
     do_averages(std::cin, std::cout);
 }
-
-} // namespace

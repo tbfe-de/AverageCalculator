@@ -3,8 +3,6 @@
 
 #include <iosfwd>
 
-namespace my {
-
 class Averager {
     float sum_{0.0f};
     int count_{0};
@@ -15,7 +13,5 @@ class Averager {
 public:
     auto getCount() const { return count_; }
 };
-
-} // namespace
 
 #endif // include guard

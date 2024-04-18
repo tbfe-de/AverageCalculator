@@ -12,6 +12,7 @@
         "ostream",
         "ostringstream",
         "struct",
+        "templatization",
         "YANETUT"
     ],
     "files.associations": {
