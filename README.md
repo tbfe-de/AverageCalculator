@@ -10,17 +10,16 @@ without such knowledge may skip skip this step.)
 
 ## Step 2
 
-Compare the C code from Step 1 to equivalent C++ code and describe
-the advantages and disadvantageous you recognize. (Note that this
-step is also meant to learn to use VSCODE's "Diff Folders" Plugin,
-which you should install now if it isn't already present. In case
-you use a different IDE find an appropriate diff-viewer.)
+Compare some C code (from the previous step) to equivalent C++
+code, describing the recognized advantages and disadvantages.
+(This step is also meant to learn using VSCODE's "Diff Folders"
+Plugin which you should installed before. Or if a different IDE
+some other an appropriate diff-viewer.)
 
 ## Step 3
 
-Split the single source used so far into a header and an
-implementation; also replace default arguments with an additional
-overload.
+(a) Split a single source file into header and an implementation.
+(b) Replace default arguments with a function overload.
 
 ## Step 4
 
@@ -28,23 +27,22 @@ Turn pointer arguments into references.
 
 ## Step 5
 
-Move the innermost `while`-loop into a function of its own, named
-`do_single_average`.
+Move a nested `while`-loop into a function of its own.
 
 ## Step 6
 
-Modify the parameterization of `do_single_average` to return the
-result via a reference argument  `struct sum_count` which has two
-elements, one for element count and another one for the sum of all
-elements.
+Modify the parameterization a function to return a result
+consisting of two values via a (non-`const`) reference to a
+`struct` with two elements.
 
 ## Step 7
 
-Give `do_single_average` a result type `bool` and return return
-`false` if some of the inputs wasn't a `float` value.
+Give a function a result type `bool` and return `false` if some
+of the inputs in the current line wasn't a `float` value, or
+`true` if all input was accepted.
 
 ## Step 8
 
-Instead of indicating conversion problems inside the function
-`do_single_average` (ie. some input is not convertible to `float`)
-via the result throw an exception.
+Instead of indicating the conversion problems inside function via
+a `boolean` return value (like in the previous step) do it by
+`throw`-ing an exception which the caller then has to `catch`.

@@ -9,10 +9,10 @@
 void do_averages(FILE* in, FILE* out) {
     char line[100];
     while (fgets(line, sizeof line, in)) {
+        float value;
         float sum = 0.0f;
         int count = 0;
         int nchars = 0;
-        float value;
         int nc;
         while (sscanf(&line[nchars], "%f%n", &value, &nc) == 1) {
             sum += value;

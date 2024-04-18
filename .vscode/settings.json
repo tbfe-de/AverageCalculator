@@ -3,15 +3,19 @@
         "Averager",
         "cout",
         "cppreference",
+        "DTEST",
         "getline",
         "iosfwd",
         "iostream",
         "istream",
         "istringstream",
         "ostream",
-        "struct"
+        "ostringstream",
+        "struct",
+        "YANETUT"
     ],
     "files.associations": {
         "iosfwd": "cpp"
-    }
+    },
+    "C_Cpp.dimInactiveRegions": false
 }

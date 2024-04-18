@@ -1,13 +1,14 @@
 # TODO
 
-- Instead of returning the indication if there has been bad
-  input with with a `bool`-result throw an exception.
+- Throw an exception instead of returning the indication whether
+  there has been incompletely processed input with with a
+  `bool`-result throw an exception.
 - The simple-most solution would be to just `throw` the message,
   eg. "non-numeric value in input line" to be displayed by
-  `do_averages` before continuing as, ie. the type to be caught by
-  the `catch`-block would need to a be `char const*`.
+  `do_averages` before continuing. Ie. the type to be caught by
+  the `catch`-block would be `char const*`.
 
------------------------------------------------------------------
+------------------------------------------------------------------
 
 TODO (optional - meant for further self-study only):
 
@@ -16,7 +17,7 @@ TODO (optional - meant for further self-study only):
   naming the offending (non-numeric) character and its position
   in the input line.
 - Of course, if an `std::string` is thrown instead of a simple
-  string literal in double quotes the type expected by catch
+  string literal in double quotes, the type expected by catch
   needs to be changed accordingly.
 
 - HINT: After a failed application of `operator>>` like
@@ -27,13 +28,13 @@ TODO (optional - meant for further self-study only):
    ```
 
    the not yet processed part of an `std::istringstream`
-   representing a single line of input the unread remainder may be
-   retrieved like this:
+   (representing a single line of input) may be retrieved like
+   this:
 
    ```cpp
-   if (iss.fail() && !iss.eof())     // failed before eol
-       iss.clear();                  // clear fail state
-       std::string remainder{};      // variable to read ...
-       std::getline(iss, remainder); // ... what remains
+   if (iss.fail() && !iss.eof()) // incompletely processed line
+       iss.clear();                  // clear the fail state
+       std::string remainder{};      // variable used to read ...
+       std::getline(iss, remainder); // ... what still remains
    }
    ```

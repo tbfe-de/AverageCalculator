@@ -13,7 +13,7 @@
   any of the two commands:
   - `gcc -xc -std=c89 main.c` (= version of the C language as
    standardized by ANSI 1989 and ISO 1990)
-  - `g++ -xc++ -std=c++23 main.cpp` (= version of the C+ language
+  - `g++ -xc++ -std=c++23 main.c` (= version of the C++language
    as standardized by ISO 33 years later)
 
 REMARK 1:

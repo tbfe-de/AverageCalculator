@@ -15,9 +15,9 @@
 void do_averages(std::istream* in, std::ostream* out) {
     std::string line;
     while (std::getline(*in, line)) {
+        float value = 0.0f;
         float sum = 0.0f;
         int count = 0;
-        float value;
         std::istringstream iss{line};
         while (iss >> value) {
             sum += value;
