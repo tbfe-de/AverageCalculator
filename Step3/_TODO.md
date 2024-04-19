@@ -1,4 +1,4 @@
-# TODO
+# TODO STEP 3
 
 - Examine the file structure of the two implementation files (aka.
   translation units) `main.cpp` and `do_averages.cpp` and the

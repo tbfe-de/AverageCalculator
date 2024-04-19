@@ -1,4 +1,4 @@
-# TODO
+# TODO STEP 9
 
 - Turn the explicit initialization of `struct sum_count sc` into a
   direct member initialization.

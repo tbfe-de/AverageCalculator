@@ -1,4 +1,4 @@
-# TODO
+# TODO STEP 7
 
 - Let the function `do_single_average` return a `bool`-result
   to to indicate whether all the input was numeric or not.

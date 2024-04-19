@@ -1,4 +1,4 @@
-# TODO
+# TODO STEP 6
 
 - Modify the parameterization of `do_single_average` to **return**
   the result via a reference argument `struct sum_count` with two

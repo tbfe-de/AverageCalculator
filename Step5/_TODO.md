@@ -1,4 +1,4 @@
-# TODO
+# TODO STEP 5
 
 - Move the INNER loop of `do_averages` together with all statement
   accessing any of the variables `value`, `sum`, and `count` into

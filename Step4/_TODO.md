@@ -1,4 +1,4 @@
-# TODO
+# TODO STEP 4
 
 Currently the arguments handed over to `do_average` are pointers.
 

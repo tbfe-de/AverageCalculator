@@ -1,4 +1,4 @@
-# TODO
+# TODO STEP 2
 
 - Examine the C++-program in `main.cpp` and how it differs from
   the C program `main.c` in the previous step and describe the

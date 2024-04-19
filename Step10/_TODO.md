@@ -1,4 +1,4 @@
-# TODO
+# TODO STEP 10
 
 - Turn the `struct sum_count` into a `class Averager`
   - by making `operator<<` and `operator+=` friends and

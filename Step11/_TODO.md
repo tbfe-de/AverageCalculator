@@ -1,4 +1,4 @@
-# TODO
+# TODO STEP 11
 
 - Move the class `Averager` into files of their own properly in
   dividing it into
