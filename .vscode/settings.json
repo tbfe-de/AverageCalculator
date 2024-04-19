@@ -9,6 +9,7 @@
         "iostream",
         "istream",
         "istringstream",
+        "MinMaxer",
         "ostream",
         "ostringstream",
         "struct",

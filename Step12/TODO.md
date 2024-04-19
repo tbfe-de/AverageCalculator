@@ -6,10 +6,10 @@
 
 TODO (optional - meant for further self-study only):
 
-Here are some ideas for more practical programming exercises
-based what has been achieved so far. These steps are mostly
-independent of each other so you make "pick and chose" according
-to what matches your interest best.
+Here are some ideas for more programming exercises based what has
+been achieved so far. These steps are mostly independent of each
+other so you make "pick and chose" according to what matches your
+interest best.
 
 - Put every class and function developed as part of this code
   - either into an anonymous namespace (if it only needs to be
