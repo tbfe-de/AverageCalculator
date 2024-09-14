@@ -1,7 +1,7 @@
 # TODO STEP 8
 
 - Throw an exception instead of returning the indication whether
-  there has been incompletely processed input with with a
+  there has been incompletely processed input with a
   `bool`-result throw an exception.
 - The simple-most solution would be to just `throw` the message,
   eg. "non-numeric value in input line" to be displayed by

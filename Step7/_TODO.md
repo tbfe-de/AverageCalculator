@@ -1,7 +1,7 @@
 # TODO STEP 7
 
 - Let the function `do_single_average` return a `bool`-result
-  to to indicate whether all the input was numeric or not.
+  to indicate whether all the input was numeric or not.
 - When `do_averages` calls `do_single_average` and receives the
   result `false` it should show a message that it ignores this
   line of input.
