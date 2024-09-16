@@ -13,8 +13,10 @@
   default values set in the header `do_averages.h` take over.
 
 **Note:** The solution provided in the next step makes two more
-substantial changes which **you are not meant to do yourself**
-as part of this step:
+substantial changes which you may also try yourself if time
+allows. But as it is more a work of "diligence" than something
+you can substatially learn from it suffices if you only compare
+the result (eg. with Diff Folders). 
 
 1. The single file `main.cpp is split into three files each of
    which is responsible for a separate major part:
