@@ -85,3 +85,24 @@ Move a class into files of its own, properly separating between
 ## Step 12
 
 This code is only provided as a solution to the prior step.
+
+The final optional steps suggest to make the last version
+easily extensible by implementing this architecture:
+
+                     +--------------------------+
+                     |       <<interface>>      |
+                     |      IValueProcessor     |
+                     |--------------------------|
+  do_processing - - >| + reset()                |
+                     | + operator+=()           |
+                     | + print() {readonly}     |
+                     | + hasValues() {readonly} |
+                     +--------------------------+
+                                   ^
+                    <<implements>> |
+                                   |
+                     +-------------+-------------+
+                     |                           |
+            +-----------------+         +-----------------+
+            |    Averager     |         |     MinMaxer    |                           
+            +-----------------+         +-----------------+
