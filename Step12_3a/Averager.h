@@ -9,7 +9,7 @@ namespace my {
 
 class Averager : public IValueProcessor {
     value_type sum_{}; // empty braces mean zero for
-    value_type count_{}; // builtin arithmetic types
+    std::size_t count_{}; // builtin arithmetic types
 public: // implementing the interface
     void print(std::ostream&) const override;  
     void operator+=(value_type rhs) override;
