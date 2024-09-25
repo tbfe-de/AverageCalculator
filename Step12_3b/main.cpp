@@ -1,6 +1,6 @@
 /*
  =================================================================
- Step 12_3a (Solution for Step12 optional part 3 (2nd variant)
+ Step 12_3b (Solution for Step12 optional part 3 - 2nd variant)
  =================================================================
 */
 
