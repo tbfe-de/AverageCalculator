@@ -1,0 +1,25 @@
+#ifndef MY_AVERAGER_H_
+#define MY_AVERAGER_H_
+
+#include "IValueProcessor.h"
+
+#include <cstddef>
+#include <iosfwd>
+
+namespace my {
+
+class Averager : public IValueProcessor<float> {
+    value_type sum_{}; // empty braces mean zero for
+    std::size_t count_{}; // builtin arithmetic types
+public: // implementing the interface
+    void print(std::ostream&) const override;  
+    void operator+=(value_type rhs) override;
+    bool hasValues() const override { return (count_ > 0); }
+    void reset() override;
+};
+
+} // namespace
+
+
+
+#endif // include guard
